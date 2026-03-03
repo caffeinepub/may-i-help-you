@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Fonts ──────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/Outfit.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Design Tokens ──────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Warm saffron-orange primary */
+    --primary: 0.68 0.19 46;
+    --primary-foreground: 0.99 0 0;
+
+    /* Deep navy secondary */
+    --secondary: 0.25 0.07 255;
+    --secondary-foreground: 0.99 0 0;
+
+    /* Warm cream background */
+    --background: 0.98 0.01 80;
+    --foreground: 0.18 0.04 260;
+
+    /* Card */
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.04 260;
+
+    /* Popover */
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.04 260;
+
+    /* Muted warm gray */
+    --muted: 0.94 0.02 60;
+    --muted-foreground: 0.52 0.03 250;
+
+    /* Accent - warm amber */
+    --accent: 0.93 0.06 75;
+    --accent-foreground: 0.18 0.04 260;
+
+    /* Destructive */
+    --destructive: 0.58 0.24 27;
+    --destructive-foreground: 0.99 0 0;
+
+    /* Border / Input */
+    --border: 0.88 0.03 70;
+    --input: 0.88 0.03 70;
+    --ring: 0.68 0.19 46;
+
+    /* Charts */
+    --chart-1: 0.68 0.19 46;
+    --chart-2: 0.55 0.15 145;
+    --chart-3: 0.25 0.07 255;
+    --chart-4: 0.75 0.17 84;
+    --chart-5: 0.62 0.22 350;
+
+    /* Sidebar */
+    --sidebar: 0.18 0.04 260;
+    --sidebar-foreground: 0.99 0 0;
+    --sidebar-primary: 0.68 0.19 46;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.28 0.08 260;
+    --sidebar-accent-foreground: 0.99 0 0;
+    --sidebar-border: 0.30 0.07 260;
+    --sidebar-ring: 0.68 0.19 46;
+
+    /* Brand colors for direct use */
+    --brand-saffron: oklch(0.68 0.19 46);
+    --brand-saffron-light: oklch(0.85 0.12 60);
+    --brand-saffron-dark: oklch(0.52 0.18 40);
+    --brand-navy: oklch(0.25 0.07 255);
+    --brand-navy-light: oklch(0.35 0.09 255);
+    --brand-cream: oklch(0.98 0.01 80);
+    --brand-warm-white: oklch(1 0 0);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: "Fraunces", serif;
+  }
+}
+
+/* ── Custom utilities ────────────────────────────────────────────────────── */
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, oklch(0.18 0.06 255) 0%, oklch(0.22 0.08 258) 40%, oklch(0.28 0.05 50) 100%);
+  }
+
+  .saffron-gradient {
+    background: linear-gradient(135deg, oklch(0.68 0.19 46) 0%, oklch(0.72 0.18 55) 100%);
+  }
+
+  .section-wave {
+    clip-path: ellipse(120% 100% at 50% 0%);
+  }
+
+  .text-brand-saffron {
+    color: var(--brand-saffron);
+  }
+
+  .bg-brand-saffron {
+    background-color: var(--brand-saffron);
+  }
+
+  .bg-brand-navy {
+    background-color: var(--brand-navy);
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(circle, oklch(0.68 0.19 46 / 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
