@@ -165,10 +165,10 @@ export default function Footer() {
               <li className="flex items-center gap-3 text-sm text-navy-200">
                 <Mail size={16} className="text-saffron-400 shrink-0" />
                 <a
-                  href="mailto:support@mayihelpyou.in"
+                  href="mailto:ngo.satna@gmail.com"
                   className="hover:text-saffron-300 transition-colors"
                 >
-                  support@mayihelpyou.in
+                  ngo.satna@gmail.com
                 </a>
               </li>
             </ul>

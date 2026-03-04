@@ -277,7 +277,7 @@ export default function ContactPage() {
                   {
                     icon: Mail,
                     title: "Email Us",
-                    lines: ["support@mayihelpyou.in", "partner@mayihelpyou.in"],
+                    lines: ["ngo.satna@gmail.com"],
                   },
                   {
                     icon: Clock,
